@@ -1,0 +1,21 @@
+ALERT NAME: SSH Brute Force Attempt
+
+DATA SOURCE:
+- Linux authentication logs
+
+DETECTION LOGIC:
+- More than 5 failed SSH login attempts
+- Same source IP
+- Within a short time window
+
+SEVERITY:
+High
+
+MITRE ATT&CK:
+T1110 – Brute Force
+
+RESPONSE ACTIONS:
+- Validate alert
+- Check IP reputation
+- Block IP if malicious
+- Document incident
