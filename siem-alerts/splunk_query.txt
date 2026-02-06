@@ -1,0 +1,5 @@
+# Detects multiple failed SSH login attempts from the same IP
+
+index=linux_logs "Failed password"
+| stats count by src_ip
+| where count > 5
